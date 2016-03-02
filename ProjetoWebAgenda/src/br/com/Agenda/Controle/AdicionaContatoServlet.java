@@ -70,7 +70,7 @@ public class AdicionaContatoServlet extends HttpServlet{
 		
 		out.println("<html>");
 		out.println("<body>");
-		out.println("Contato" + contato.getNome() + "Adicionado com sucesso");
+		out.println("Contato " + contato.getNome() + " Adicionado com sucesso");
 		out.println("<body>");
 		out.println("<html>");
 		

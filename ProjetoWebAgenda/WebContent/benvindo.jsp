@@ -19,7 +19,7 @@
 		<br/>
 		
 		<%
-			String desenvolvido = "Desenvolvido por (Jhon Donavan)";
+			String desenvolvido = "Desenvolvido por Jhon Donavan";
 		%> 
 		<%= desenvolvido %>
 		

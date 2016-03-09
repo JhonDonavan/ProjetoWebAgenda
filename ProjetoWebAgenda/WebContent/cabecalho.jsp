@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<img src="imagens/logo1	.jpg" />
-<h2>Sistema de Agenda de contatos online</h2>
+	<table>
+		<tr>
+			<td><img src="imagens/logo1	.jpg" /></td>
+			<td valign="bottom"><h2>Sistema de Agenda de contatos online</h2></td>
+		</tr>
+	</table>
 <hr />
 
 </body>

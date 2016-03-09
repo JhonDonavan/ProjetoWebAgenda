@@ -9,7 +9,7 @@
 <body>
 
 <hr />
-Copyright 2010 - Todos os direitos reservados
+<spam align=center>Copyright 2010 - Todos os direitos reservados</spam>
 
 </body>
 </html>

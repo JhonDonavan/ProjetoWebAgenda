@@ -67,7 +67,7 @@ public class AdicionaContatoServlet extends HttpServlet{
 		}
 		dao.adiciona(contato);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/contato-adicionado.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("contato-adicionado.jsp");
 		rd.forward(request, response);
 		
 

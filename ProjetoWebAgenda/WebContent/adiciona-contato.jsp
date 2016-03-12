@@ -15,10 +15,12 @@
 	<script src="js/jquery-ui.js"></script>
 </head>
 <body>
-<c:import url="cabecalho.jsp" />	
+<c:import url="cabecalho.jsp" />
+<a href="mvc?logica=ListaContatosLogic"><input type="button" value="Voltar"/></a>
+<hr />
 	<h1>Adicionar contatos</h1>
 	<hr>
-	<form action="adicionaContato" method="post">
+	<form action="adicionaContato">
 		<table>
 		<tr>
 		<td>Nome:</td>

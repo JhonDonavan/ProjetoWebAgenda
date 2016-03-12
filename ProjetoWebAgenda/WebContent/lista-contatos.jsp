@@ -11,7 +11,9 @@
 <body>
 <c:import url="cabecalho.jsp" />
 
-
+<a href="Index.jsp"><input type="button" value="Voltar"/></a> <a href="adiciona-contato.jsp"><input type="button" value="Cadastrar Contato" /> </a>				
+<hr>
+<h1>lista de contatos</h1>
  <table>
 	<!-- percorre contatos montando as linhas da tabela -->
 	<tr bgcolor="#66CCFF">

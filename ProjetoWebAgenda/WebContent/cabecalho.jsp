@@ -17,7 +17,7 @@
 			<td valign="bottom"><h2>Sistema de Agenda de contatos online</h2></td>
 		</tr>
 	</table>
-<hr />
+<hr/>
 
 </body>
 </html>

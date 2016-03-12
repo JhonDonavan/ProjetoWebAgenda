@@ -20,15 +20,16 @@ public class ControllerServlet  extends HttpServlet{
 		String nomeDaClasse = "br.com.caelum.mvc.logica." + parametro;
 		try {
 			Class classe = Class.forName(nomeDaClasse);
-			
-			Logica logica =  (Logica) classe.newInstance();
+			Logica logica = (Logica) classe.newInstance();
 			String pagina = logica.executa(request, response);
-			
 			request.getRequestDispatcher(pagina).forward(request, response);
 		
-		} catch (Exception e) {
+		} catch (ClassNotFoundException e) {
 			throw new ServletException(
 			"A lógica de negócios causou uma exceção", e);
+			} catch (Exception e){
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 	}
 }

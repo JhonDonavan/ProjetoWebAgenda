@@ -162,7 +162,7 @@ public class ContatoDAO {
 			try{
 				PreparedStatement stmt = connection.prepareStatement(sql);
 				stmt.setLong(1, contato.getId());
-				stmt.executeQuery();
+				stmt. executeUpdate();
 				stmt.close();
 				
 			} catch(SQLException e){

@@ -12,15 +12,14 @@
 <c:import url="cabecalho.jsp" />
 
 <jsp:useBean id="dao" class="br.com.Agenda.DAO.ContatoDAO"/>
-
-
- <table border="1">
+ <table>
 	<!-- percorre contatos montando as linhas da tabela -->
 	<tr bgcolor="#	66CCFF">
 		<td>Nome</td>
 		<td>Email</td>
 		<td>Endereço</td>
 		<td>Data de Nascimento</td>
+		<td>Remover contato</td>
 	</tr>
 	<c:forEach var="contato" items="${dao.lista}" varStatus="id">
 	<tr bgcolor="#${id.count % 2 == 0 ? 'E0E0E0' : 'ffffff' }">
@@ -33,7 +32,7 @@
 		<td>
 			<c:choose>
 				<c:when test="${not empty contato.email}">
-					<a href="mailto:${contato.email}">${contato.email}></a>
+					<a href="mailto:${contato.email}">${contato.email}</a>
 				</c:when>
 				<c:otherwise>
 					E-Mail não informado

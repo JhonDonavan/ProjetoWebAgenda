@@ -11,17 +11,17 @@
 <body>
 <c:import url="cabecalho.jsp" />
 
-<jsp:useBean id="dao" class="br.com.Agenda.DAO.ContatoDAO"/>
+
  <table>
 	<!-- percorre contatos montando as linhas da tabela -->
-	<tr bgcolor="#	66CCFF">
+	<tr bgcolor="#66CCFF">
 		<td>Nome</td>
 		<td>Email</td>
 		<td>Endereço</td>
 		<td>Data de Nascimento</td>
 		<td>Remover contato</td>
 	</tr>
-	<c:forEach var="contato" items="${dao.lista}" varStatus="id">
+	<c:forEach var="contato" items="${contatos}" varStatus="id">
 	<tr bgcolor="#${id.count % 2 == 0 ? 'E0E0E0' : 'ffffff' }">
 		<td>${contato.nome}</td>
 		<%-- <td>

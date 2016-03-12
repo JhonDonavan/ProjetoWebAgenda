@@ -20,6 +20,6 @@ public class RemoveContatoLogic implements Logica {
 		
 		
 		
-		return "/lista-contatos.jsp";
+		return "mvc?logica=ListaContatosLogic";
 	}
 }

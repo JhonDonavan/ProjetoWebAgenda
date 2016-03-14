@@ -11,7 +11,7 @@
 <body>
 <c:import url="cabecalho.jsp" />
 
-<a href="VoltarIndexServlet"><input type="button" value="Voltar"/></a> <a href="adiciona-contato.jsp"><input type="button" value="Cadastrar Contato" /> </a>				
+<a href="VoltarIndex"><input type="button" value="Voltar"/></a> <a href="adiciona-contato.jsp"><input type="button" value="Cadastrar Contato" /> </a>				
 <hr>
 <h1>lista de contatos</h1>
  <table>

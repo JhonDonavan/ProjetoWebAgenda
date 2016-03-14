@@ -67,7 +67,7 @@ public class AdicionaContatoServlet extends HttpServlet{
 		}
 		dao.adiciona(contato);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("mvc?logica=ListaContatosLogic");
+		RequestDispatcher rd = request.getRequestDispatcher("Redirect.jsp");
 		rd.forward(request, response);
 		
 

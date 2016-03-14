@@ -20,7 +20,7 @@
 <hr />
 	<h1>Adicionar contatos</h1>
 	<hr>
-	<form action="adicionaContato">
+	<form action="adicionaContato" method="post">
 		<table>
 		<tr>
 		<td>Nome:</td>

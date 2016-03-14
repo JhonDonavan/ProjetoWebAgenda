@@ -8,11 +8,14 @@
 </head>
 <body>
 
-<script language= "JavaScript">
+<!-- <script language= "JavaScript">
 alert("Contato cadastrado com sucesso\nVoce será redircionado.");
 
 setTimeout("document.location = 'mvc?logica=ListaContatosLogic'",1000);
-</script>
-
+</script> -->
+<p align="center">
+<!-- <h3><a href="mvc?logica=ListaContatosLogic">Clique aqui para ser redirecionado</a></h3> -->
+<% response.sendRedirect("mvc?logica=ListaContatosLogic"); %>
+</p>
 </body>
 </html>

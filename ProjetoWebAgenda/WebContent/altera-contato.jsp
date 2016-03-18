@@ -33,7 +33,7 @@
 		<td><caelum:campoData id="dataNascimento" /></td>
 		</tr>
 		</table>
-		<input type="submit" value="Gravar">
+		<input type="submit" value="Alterar">
 	
 <c:import url="rodape.jsp" />
 </body>

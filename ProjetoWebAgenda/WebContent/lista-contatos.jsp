@@ -14,14 +14,15 @@
 <a href="VoltarIndex"><input type="button" value="Voltar"/></a> <a href="adiciona-contato.jsp"><input type="button" value="Cadastrar Contato" /> </a>				
 <hr>
 <h1>lista de contatos</h1>
- <table>
+ <table border=0 bgcolor="black" align=center>
 	<!-- percorre contatos montando as linhas da tabela -->
 	<tr bgcolor="#66CCFF">
 		<td>Nome</td>
 		<td>Email</td>
 		<td>Endereço</td>
 		<td>Data de Nascimento</td>
-		<td>Remover contato</td>
+		<td colspan=2 align="center">Ações</td>
+		
 	</tr>
 	<c:forEach var="contato" items="${contatos}" varStatus="id">
 	<tr bgcolor="#${id.count % 2 == 0 ? 'E0E0E0' : 'ffffff' }">
@@ -45,6 +46,7 @@
 		<td><fmt:formatDate value="${contato.dataNascimento.time}" 
 		pattern="dd/MM/yyyy"/></td>
 		<td> <a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover</a></td>
+		<td><a href="mvc?logica=AlteraContatoLogic&id=${contato.id}">Alterar</a></td>
 	</tr>
 	</c:forEach>
 </table>

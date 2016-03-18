@@ -82,7 +82,7 @@ public class ContatoDAO {
 				PreparedStatement stmt =  connection.prepareStatement(sql);
 				ResultSet rs = stmt.executeQuery();
 				
-				
+				while (rs.next()){
 				/*Contato contato = new Contato();*/
 				contato.setId(rs.getLong("id"));
 				contato.setNome(rs.getString("nome"));
@@ -95,7 +95,7 @@ public class ContatoDAO {
 				
 				/*contatos.add(contato);*/
 				
-				
+				}
 				rs.close();
 				stmt.close();
 				return contato;

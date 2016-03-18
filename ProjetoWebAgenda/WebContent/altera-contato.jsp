@@ -34,7 +34,9 @@
 		</tr>
 		<tr>
 		<td>Data de Nascimento:</td> 
-		<td><caelum:campoData id="DataNascimento" contato.DataNascimento></caelum:campoData></td>
+		<!-- <td><input <fmt:formatDate value=${contato.dataNascimento.time}
+		pattern="dd/MM/yyyy"/>/></td> -->
+		<td><input type="text" name="DataNascimento" value=${contato.dataNascimento}></input></td>
 		</tr>
 		</table>
 		<input type="submit" value="Alterar">

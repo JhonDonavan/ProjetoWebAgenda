@@ -42,6 +42,9 @@ public class ContatoDAO {
 		public List<Contato> getLista(){
 			try{
 				List<Contato> contatos = new ArrayList<Contato>();
+				
+				
+				
 				PreparedStatement stmt = this.connection.prepareStatement("Select * from contatos" );
 				ResultSet rs = stmt.executeQuery();
 				
@@ -70,31 +73,32 @@ public class ContatoDAO {
 			
 		}
 		
-		public List<Contato> GetContatoForId(long id){
+		public Contato GetContatoForId(long id){
 			try{
-				List<Contato> contatos = new ArrayList<Contato>();
-				PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where"
-																						+ " id = ? " + id + ";");
+				Contato contato = new Contato();
+				/*PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where"
+																						+ " id = ? " + id + ";");*/
+				String sql = "select * from contatos where id = " + id;
+				PreparedStatement stmt =  connection.prepareStatement(sql);
 				ResultSet rs = stmt.executeQuery();
 				
-				
-			while(rs.next()){
-				Contato contato = new Contato();
+				while (rs.next()){
+				/*Contato contato = new Contato();*/
 				contato.setId(rs.getLong("id"));
 				contato.setNome(rs.getString("nome"));
-				contato.setEmail(rs.getString("Email"));
+				contato.setEmail(rs.getString("email"));
 				contato.setEndereco(rs.getString("endereco"));
 				
-				Calendar data = Calendar.getInstance(); 
+				Calendar data = Calendar.getInstance();
 				data.setTime(rs.getDate("dataNascimento"));
 				contato.setDataNascimento(data);
 				
-				contatos.add(contato);
+				/*contatos.add(contato);*/
 				
-			}
+				}
 				rs.close();
 				stmt.close();
-				return contatos;
+				return contato;
 			
 				
 			}catch (SQLException e){

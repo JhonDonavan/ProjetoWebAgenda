@@ -32,7 +32,7 @@ public class BuscaContatosServlet extends HttpServlet {
 		
 		try {
 			ContatoDAO dao = new ContatoDAO();
-			List<Contato> contato = (List<Contato>) dao.GetContatoForId(cod);
+			Contato contato =  dao.GetContatoForId(cod);
 			request.setAttribute("contato", contato);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("/altera-contato.jsp");

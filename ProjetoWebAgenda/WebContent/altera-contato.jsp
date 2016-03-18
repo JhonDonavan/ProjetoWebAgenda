@@ -17,20 +17,24 @@
 	<form action="adicionaContato" method="post">
 		<table>
 		<tr>
+		<td>Id:</td>
+		<td><input type="text" name="id" value=${contato.id}></input></td>
+		</tr>
+		<tr>
 		<td>Nome:</td>
-		<td><input type="text" name="nome"/></td>
+		<td><input type="text" name="nome" value=${contato.nome}></input></td>
 		</tr>
 		<tr>
 		<td>E-Mail:</td>
-		<td><input type="text" name="email"/></td>
+		<td><input type="text" name="email" value=${contato.email}></input></td>
 		</tr>
 		<tr>
 		<td>Endereço:</td>
-		<td><input type="text" name="endereco"/><td>
+		<td><input type="text" name="endereco" value=${contato.endereco}></input><td>
 		</tr>
 		<tr>
 		<td>Data de Nascimento:</td> 
-		<td><caelum:campoData id="dataNascimento" /></td>
+		<td><caelum:campoData id="DataNascimento" contato.DataNascimento></caelum:campoData></td>
 		</tr>
 		</table>
 		<input type="submit" value="Alterar">

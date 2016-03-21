@@ -22,6 +22,7 @@
 	<hr>
 	<form action="adicionaContato" method="post">
 		<table>
+		
 		<tr>
 		<td>Nome:</td>
 		<td><input type="text" name="nome"/></td>

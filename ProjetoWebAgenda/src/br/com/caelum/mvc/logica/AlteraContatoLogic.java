@@ -1,5 +1,6 @@
 package br.com.caelum.mvc.logica;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -28,16 +29,9 @@ public abstract class AlteraContatoLogic implements Logica{
 		
 		ContatoDAO dao = new ContatoDAO();
 		
-		dao.alterar(contato);
+		String contatoAlterado = dao.alterar(contato);
 		
-		
-		
-		
-		
-		
-		
-		
-		return "contato-alterado.jsp";
+		return "mvc?logica=ListaContatosLogic";
 	}
 
 	

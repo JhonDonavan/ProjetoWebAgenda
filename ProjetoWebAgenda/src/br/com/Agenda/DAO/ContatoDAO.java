@@ -139,9 +139,9 @@ public class ContatoDAO {
 			
 		}
 		
-		public void alterar (Contato contato){
+		public String alterar (Contato contato){
 			String sql = "update caontatos  set nome=?, email=?, endereco=?,datanascimento=? +"
-						+ "where id=?";
+						 + "where id=?";
 			
 			try{
 				PreparedStatement stmt =  connection.prepareStatement(sql);
@@ -157,6 +157,8 @@ public class ContatoDAO {
 			}catch (SQLException e){
 				throw new RuntimeException(e);
 			}
+			
+			return contato.getNome();
 			
 		}
 		

@@ -17,7 +17,7 @@
 
 <h1>Adicionar contatos</h1>
 	<hr>
-	<form action="adicionaContato" method="post">
+	<form action="AlteraContatoLogic" method="post">
 		<table>
 		<tr>
 		<td>Id:</td>

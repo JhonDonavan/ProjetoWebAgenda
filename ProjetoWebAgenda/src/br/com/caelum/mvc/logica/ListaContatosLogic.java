@@ -10,7 +10,7 @@ import br.com.Agenda.Modelo.Contato;
 
 public class ListaContatosLogic implements Logica {
 		public String executa(HttpServletRequest request, 
-				HttpServletResponse response) throws Exception{
+			HttpServletResponse response) throws Exception{
 			List<Contato> contatos = new ContatoDAO().getLista();
 			
 			request.setAttribute("contatos", contatos);
